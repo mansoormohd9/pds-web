@@ -2,6 +2,7 @@
   <div class="container is-widescreen">
     <Header/>
     <CarouselComp />
+    <Banner />
     <FeaturedProducts/>
     <Blogs/>
     <Footer/>
@@ -15,6 +16,7 @@ import Footer from "./Footer.vue";
 import FeaturedProducts from "./FeaturedProducts.vue";
 import Blogs from "./Blogs.vue";
 import CarouselComp from "./Carousel.vue";
+import Banner from "./Banner.vue";
 
 @Component({
   components: {
@@ -22,7 +24,8 @@ import CarouselComp from "./Carousel.vue";
     CarouselComp,
     Footer,
     FeaturedProducts,
-    Blogs
+    Blogs,
+    Banner
   },
 })
 export default class MainContainer extends Vue {

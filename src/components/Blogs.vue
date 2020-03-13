@@ -94,4 +94,7 @@ export default class Blogs extends Vue {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+section.blog-section {
+    height: 200px;
+}
 </style>

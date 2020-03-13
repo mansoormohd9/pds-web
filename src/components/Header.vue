@@ -3,8 +3,8 @@
         <template slot="brand">
             <b-navbar-item>
                 <img
-                    src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
-                    alt="Lightweight UI components for Vue.js based on Bulma"
+                    src="../assets/YOUSHOP.png"
+                    alt="You Shop"
                 >
             </b-navbar-item>
         </template>
@@ -15,12 +15,9 @@
             <b-navbar-item href="#">
                 Documentation
             </b-navbar-item>
-            <b-navbar-dropdown label="Info">
-                <b-navbar-item href="#">
-                    About
-                </b-navbar-item>
-                <b-navbar-item href="#">
-                    Contact
+            <b-navbar-dropdown label="All Categories">
+                <b-navbar-item href="#" v-for="(category, index) in categories" :key="index">
+                    {{ category.name }}
                 </b-navbar-item>
             </b-navbar-dropdown>
         </template>
@@ -42,9 +39,15 @@
 
 <script lang="ts">
 import {Vue, Component} from 'vue-property-decorator'
+import * as api from "../utils/util";
+import { Category } from "../types/types";
 
 @Component
 export default class Header extends Vue {
+  categories: Array<Category> = [];
 
+  created() {
+    this.categories = api.getCategoryItems();
+  }
 }
 </script>
