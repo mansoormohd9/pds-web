@@ -6,12 +6,12 @@ export interface Product {
   categoryId: number;
 }
 
-export interface ProductCategoty {
+export interface Category {
   id: number;
   name: string;
 }
 
-export interface SubCategoty {
+export interface SubCategory {
   id: number;
   categoryId: number;
   name: string;
